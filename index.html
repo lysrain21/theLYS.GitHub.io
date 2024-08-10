@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李禹申的博客</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>李禹申的博客</h1>
+  </header>
+  <div class="container">
+    <p>我叫李禹申，这是我的博客网站，先部署到 GitHub Pages。</p>
+  </div>
+  <div class="container">
+    <h2>这是一个小标题</h2>
+    <p>下面是小标题的内容。</p>
+  </div>
+  <div class="container">
+    <h2>这是我的国科大商城dapp项目展示</h2>
+    <p>请点击链接查阅项目展示</p>
+    <a href="about.html">About Us</a>
+  </div>
+  <div class="container button-container">
+    <button onclick="incrementCount()">点击我</button>
+    <div class="count">点击次数: <span id="count">0</span></div>
+  </div>
+  <script>
+    let count = 0;
+    function incrementCount() {
+      count++;
+      document.getElementById('count').innerText = count;
+    }
+  </script>
+</body>
+
+</html>
