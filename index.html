@@ -2,39 +2,78 @@
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>李禹申的博客</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李禹申的博客</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header>
-    <h1>李禹申的博客</h1>
-  </header>
-  <div class="container">
-    <p>我叫李禹申，这是我的博客网站，先部署到 GitHub Pages。</p>
-  </div>
-  <div class="container">
-    <h2>这是一个小标题</h2>
-    <p>下面是小标题的内容。</p>
-  </div>
-  <div class="container">
-    <h2>这是我的国科大商城dapp项目展示</h2>
-    <p>请点击链接查阅项目展示</p>
-    <a href="about.html">About Us</a>
-  </div>
-  <div class="container button-container">
-    <button onclick="incrementCount()">点击我</button>
-    <div class="count">点击次数: <span id="count">0</span></div>
-  </div>
-  <script>
-    let count = 0;
-    function incrementCount() {
-      count++;
-      document.getElementById('count').innerText = count;
-    }
-  </script>
+    <header>
+        <h1>fengYu风羽的网站导航</h1>
+    </header>
+    <div class="container">
+        <h2>我是谁？</h2>
+        <p>我叫fengYu风羽，取自风度翩翩。这是我部署在github pages上的网站导览</p>
+        <p>中科院计算所计算机技术专业，研究方向为数据要素隐私计算、联盟链跨链技术。</p>
+    </div>
+    <div class="container">
+        <h2>我的理论储备</h2>
+        <p>数据要素隐私计算</p>
+        <p>联盟链跨链技术</p>
+    </div>
+
+
+    <div class="container">
+        <h2>商业化案例展示</h2>
+        <p>我能够保证我有最合理的报价和最优的交付质量，我希望你有企业数字化的需求可以联系我</p>
+        <h3>一、软件开发赋能商业</h3>
+        <p>客户管理系统</p>
+        <h3>二、企业知识库AI检索和问答系统</h3>
+        <p></p>
+    </div>
+
+
+    <div class="container">
+        <h2>我所尝试过的项目展示</h2>
+
+        <h3>一、AI相关</h3>
+        <h4>人工智能辅助复盘小工具</h4>
+        <p>该项目github连接如下</p>
+        <a href="https://github.com/gavincoder-china/ifupan.git">ifupan - AI智能复盘系统</a>
+
+        <h3>二、web3相关</h3>
+        <h4>国科大hias web3商城</h4>
+        <p>请点击链接查阅项目的文档展示</p>
+        <a href="dappStore_files/dappStore_pre.html">项目展示文档</a>
+
+        <h4>AI链下验证智能合约异常交易</h4>
+        <p>该项目github连接如下</p>
+        <a href="https://github.com/lili2323art/CryptoShield.git">AI - sheild</a>
+    </div>
+    <div class="container game-container">
+        <h2>猜数字游戏</h2>
+        <p>我想了一个1到100之间的数字，你能猜到它是什么吗？</p>
+        <input type="number" id="guessInput" placeholder="输入你的猜测">
+        <button onclick="checkGuess()">提交</button>
+        <p id="gameMessage"></p>
+    </div>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById('guessInput').value);
+            const messageElement = document.getElementById('gameMessage');
+
+            if (userGuess === randomNumber) {
+                messageElement.innerText = '恭喜你，猜对了！';
+            } else if (userGuess < randomNumber) {
+                messageElement.innerText = '太小了，再试一次。';
+            } else {
+                messageElement.innerText = '太大了，再试一次。';
+            }
+        }
+    </script>
 </body>
 
 </html>
